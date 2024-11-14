@@ -1,0 +1,224 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+.header {
+    background-color: #ffffff;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 180px;
+}
+
+.navbar a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500px;
+}
+
+.sign-in {
+    color: #0073e6;
+}
+
+.get-started {
+    font-size: 16px; /* Kích thước chữ */
+    padding: 15px 10px; /* Điều chỉnh kích thước nút: tăng chiều cao và rộng */
+    width: 150px; /* Thiết lập chiều rộng cố định nếu cần */
+    text-align: center; /* Canh giữa nội dung nút */
+    background-color: #000000; /* Màu nền của nút */
+    color: #ffffff !important; /* Màu chữ của nút */
+    text-decoration: none; /* Bỏ gạch chân */
+    border-radius: 30px; /* Độ bo góc */
+    display: inline-block; /* Đảm bảo nút không chiếm hết chiều rộng */
+}
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #ffffff; /* Màu nền tương tự như hình mẫu */
+    padding: 60px 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-text {
+    flex: 1;
+    padding-right: 200px;
+}
+
+.hero-text h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #2e2e2e; /* Màu đậm cho tiêu đề */
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.1em;
+    color: #5a5a5a;
+    margin-bottom: 40px;
+}
+
+.hero-buttons {
+    margin-top: 20px;
+}
+
+.btn-primary {
+    background-color: #000000;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #000000;
+    padding: 12px 24px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero-subtext {
+    margin-top: 30px;
+    color: #999;
+    font-size: 0.1em;
+}
+
+/* Phần hình ảnh bên phải */
+.hero-image {
+    flex: 1;
+    text-align: right;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 500px; /* Điều chỉnh kích thước hình ảnh */
+    border-radius: 10px; /* Tạo góc bo tròn nếu cần */
+}
+
+
+/* Features Section */
+.features {
+    background-color: #ffffff;
+    padding: 60px 0;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.feature {
+    width: 22%;
+}
+
+.feature img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.feature p {
+    color: #555;
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.testimonial {
+    width: 30%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.testimonial p {
+    color: #555;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.testimonial strong {
+    color: #333;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer-links {
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
