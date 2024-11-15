@@ -11,11 +11,22 @@ body {
 
 /* Header */
 .header {
-    background-color: #ffffff;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-    
+    background-color: #1b1b1b;
+    padding: 10px 0;
+
+    position: fixed; /* Cố định header */
+    top: 0; /* Đặt header ở đầu trang */
+    left: 0;
+    width: 100%; /* Để header rộng bằng trang */
+    z-index: 1000; /* Đảm bảo header nằm trên các phần tử khác */
+    height: 80px; /* Thiết lập chiều cao của header */
 }
+
+.header-shadow {
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.312); /* Đổ bóng dưới header */
+    transition: box-shadow 0.3s ease; /* Hiệu ứng chuyển đổi mềm mại */
+}
+
 
 .container {
     width: 90%;
@@ -33,7 +44,7 @@ body {
 .navbar a {
     margin-left: 20px;
     text-decoration: none;
-    color: #333;
+    color: #ffffff;
     font-weight: 500px;
 }
 
@@ -46,7 +57,7 @@ body {
     padding: 15px 10px; /* Điều chỉnh kích thước nút: tăng chiều cao và rộng */
     width: 150px; /* Thiết lập chiều rộng cố định nếu cần */
     text-align: center; /* Canh giữa nội dung nút */
-    background-color: #000000; /* Màu nền của nút */
+    background-color: #1b1b1b; /* Màu nền của nút */
     color: #ffffff !important; /* Màu chữ của nút */
     text-decoration: none; /* Bỏ gạch chân */
     border-radius: 30px; /* Độ bo góc */
@@ -66,8 +77,9 @@ body {
 
 /* Hero Section */
 .hero {
-    background-color: #ffffff; /* Màu nền tương tự như hình mẫu */
-    padding: 60px 0;
+    padding-top: 80px; /* Thêm khoảng trống phía trên để tránh header che khuất */
+    background-color: #1b1b1b; /* Màu nền tương tự như hình mẫu */
+
 }
 
 .container {
@@ -90,13 +102,13 @@ body {
 .hero-text h1 {
     font-size: 2.5em;
     font-weight: bold;
-    color: #2e2e2e; /* Màu đậm cho tiêu đề */
+    color: #ffffff; /* Màu đậm cho tiêu đề */
     margin-bottom: 20px;
 }
 
 .hero-text p {
     font-size: 1.1em;
-    color: #5a5a5a;
+    color: #f0f0f0;
     margin-bottom: 40px;
 }
 
@@ -105,8 +117,8 @@ body {
 }
 
 .btn-primary {
-    background-color: #000000;
-    color: #fff;
+    background-color: #ffffff;
+    color: #1b1b1b;
     padding: 12px 24px;
     border-radius: 5px;
     text-decoration: none;
@@ -140,6 +152,27 @@ body {
     width: 100%;
     max-width: 500px; /* Điều chỉnh kích thước hình ảnh */
     border-radius: 10px; /* Tạo góc bo tròn nếu cần */
+}
+
+/* About Section */
+.about-section {
+    background-color: #ffffff; /* Màu nền tối */
+    padding: 80px 20px; /* Khoảng cách trên và dưới */
+    text-align: center; /* Canh giữa nội dung */
+}
+
+.about-section h2 {
+    color: #000000; /* Màu chữ trắng */
+    font-size: 2.5em; /* Kích thước chữ lớn */
+    font-weight: normal; /* Độ đậm vừa phải */
+    line-height: 1.2; /* Khoảng cách giữa các dòng */
+    margin: 0; /* Xóa khoảng cách mặc định */
+    font-family: 'Arial', sans-serif; /* Hoặc font theo thiết kế */
+}
+.about-section p{
+    font-size: 1.1em;
+    color: #f0f0f0;
+    margin-bottom: 40px;
 }
 
 
