@@ -485,6 +485,7 @@ body {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 10px;
+    margin-right: 10px; /* Khoảng cách giữa hình ảnh và tên */
 }
 
 .testimonial-rating {
@@ -499,10 +500,47 @@ body {
     margin: 10px 0;
 }
 
+.testimonial-title {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
 .testimonial-author {
     font-size: 14px;
     color: #333;
     font-weight: bold;
+}
+
+.testimonial-header {
+    display: flex; /* Đặt các phần tử bên trong thành ngang hàng */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    margin-bottom: 15px; /* Khoảng cách bên dưới giữa phần header và nội dung */
+}
+
+.testimonial-name {
+    font-size: 16px; /* Kích thước chữ cho tên khách hàng */
+    font-weight: bold; /* Tên khách hàng in đậm */
+    color: #333; /* Màu chữ */
+}
+
+.testimonial-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-country {
+    font-size: 14px;
+    color: #777;
+    margin-top: 3px;
+}
+
+.testimonial-author-country {
+    font-size: 15px;
+    color: #333;
+    font-weight: 300;
+    margin-left: 7px;
 }
 
 /* Nút điều hướng */
