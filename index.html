@@ -11,19 +11,43 @@
     <!-- Header Section -->
     <header class="header">
         <div class="container">
+            <!-- Logo -->
             <div class="logo">
                 <a href="index.html">
-                    <img src="images/logo.png" alt="TikMiner"> <!-- Link hình ảnh logo -->
+                    <img src="images/logo.png" alt="TikMiner">
                 </a>
             </div>
+    
+            <!-- Navbar Menu -->
             <nav class="navbar">
                 <a href="#">Why TikMiner?</a>
                 <a href="#">Integrations</a>
                 <a href="#">Private Policy</a>
-                <a href="#" class="get-started">Get Started</a>
             </nav>
+    
+            <!-- Nút Get Started -->
+            <a href="#" class="get-started">Get Started</a>
+    
+            <!-- Nút Hamburger Menu -->
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    
+        <!-- Mobile Menu Sidebar -->
+        <div class="mobile-menu" id="mobileMenu">
+            <!-- Nút đóng menu -->
+            <button class="close-btn" onclick="toggleMenu()">×</button>
+            <ul>
+                <li><a href="#">Why TikMiner?</a></li>
+                <li><a href="#">Integrations</a></li>
+                <li><a href="#">Private Policy</a></li>
+            </ul>
         </div>
     </header>
+    
 
     <!-- Hero Section -->
     <section class="hero">
