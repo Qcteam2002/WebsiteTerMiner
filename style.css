@@ -466,7 +466,7 @@ body {
 .testimonials-wrapper {
     display: flex;
     overflow: hidden;
-    max-width: 1200px;
+    width: 100%;
 }
 
 .testimonial {
@@ -700,9 +700,8 @@ body {
 }
 
 @media (max-width: 768px) {
-    .feature-container,
-    .feature-container2,
-    .feature-container3 {
+/* Feature  responsive*/
+    .feature-container{
         flex-direction: column;
         align-items: center;
         text-align: center;
@@ -722,8 +721,61 @@ body {
     .feature-text p {
         font-size: 14px;
     }
+
+/* Feature 2 responsive*/
+    .feature-container2{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .feature-image2 img {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .feature-text2 h2 {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+
+    .feature-text2 p {
+        font-size: 14px;
+    }
+
+/* Feature 3 responsive*/
+    .feature-container3 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .feature-image3 img {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .feature-text3 h2 {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+
+    .feature-text3 p {
+        font-size: 14px;
+    }
 }
 
+/* Testimonial content*/
+@media (max-width: 768px) {
+    .testmonials-about-content h2{
+        font-size: 24px;
+    }
+
+}
+
+/* Testimonial content*/
 @media (max-width: 768px) {
     .testimonials-content {
         flex-direction: column;
@@ -732,9 +784,10 @@ body {
     }
 
     .testimonial {
-        width: 100%;
-        max-width: 300px;
-        margin: 0 auto;
+        flex: 0 0 auto; /* Loại bỏ cố định chiều rộng */
+        width: calc(100% - 40px); /* Đảm bảo mỗi testimonial chiếm toàn bộ chiều rộng với khoảng cách */
+        max-width: none;
+        margin: 0 auto 20px auto;
         text-align: center;
     }
 
@@ -751,6 +804,9 @@ body {
 
     .testimonial-author {
         font-size: 12px;
+    }
+    .nav-arrow {
+        display: none; /* Ẩn nút điều hướng trên mobile nếu không cần */
     }
 }
 @media (max-width: 768px) {
