@@ -1,4 +1,4 @@
-/* Reset CSS */
+/* Reset CSS  color: cam #ff7300 đen 1b1b1b trang #ffffff*/
 * {
     margin: 0;
     padding: 0;
@@ -46,6 +46,13 @@ body {
     text-decoration: none;
     color: #ffffff;
     font-weight: 500px;
+    text-decoration: none; /* Loại bỏ gạch chân mặc định */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Hiệu ứng mượt */
+}
+
+.navbar a:hover {
+    color: #ff7300; /* Đổi màu chữ khi hover */
+    text-decoration: underline; /* Thêm gạch chân khi hover */
 }
 
 .sign-in {
@@ -54,14 +61,25 @@ body {
 
 .get-started {
     font-size: 16px; /* Kích thước chữ */
-    padding: 15px 10px; /* Điều chỉnh kích thước nút: tăng chiều cao và rộng */
+    padding: 10px 10px; /* Điều chỉnh kích thước nút: tăng chiều cao và rộng */
     width: 150px; /* Thiết lập chiều rộng cố định nếu cần */
     text-align: center; /* Canh giữa nội dung nút */
-    background-color: #1b1b1b; /* Màu nền của nút */
+    background-color: #ff7300; /* Màu nền của nút */
     color: #ffffff !important; /* Màu chữ của nút */
+    /* border: 2px solid #ce5d00; /* Đường viền */
     text-decoration: none; /* Bỏ gạch chân */
     border-radius: 30px; /* Độ bo góc */
     display: inline-block; /* Đảm bảo nút không chiếm hết chiều rộng */
+    font-weight: 700;
+}
+
+.get-started:hover {
+    background-color: #ff730000; /* Màu nền khi hover */
+    color: #ff7300 !important; /* Màu chữ khi hover */
+    transform: scale(1.05); /* Tăng kích thước nhẹ */
+    border: 2px solid #ff7300; /* Đường viền */
+    /* box-shadow: 0px 2px 2px rgb(233, 85, 0);*/
+    text-decoration: none !important; /* Đảm bảo không có gạch chân khi hover */
 }
 
 /* Reset CSS */
@@ -94,6 +112,11 @@ body {
     justify-content: space-between;
 }
 
+.highlight {
+    color: #ff7300; /* Màu chữ bạn muốn */
+    font-weight: bold; /* (Tùy chọn) Làm chữ in đậm */
+}
+
 .hero-text {
     flex: 1;
     padding-right: 200px;
@@ -117,13 +140,14 @@ body {
 }
 
 .btn-primary {
-    background-color: #ffffff;
-    color: #1b1b1b;
+    background-color: transparent;
+    color: #ff7300;
     padding: 12px 24px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
     margin-right: 10px;
+    border: 2px solid #ff7300; /* Đường viền */
 }
 
 .btn-secondary {
@@ -159,80 +183,360 @@ body {
     background-color: #ffffff; /* Màu nền tối */
     padding: 80px 20px; /* Khoảng cách trên và dưới */
     text-align: center; /* Canh giữa nội dung */
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .about-section h2 {
-    color: #000000; /* Màu chữ trắng */
-    font-size: 2.5em; /* Kích thước chữ lớn */
+    color: #333; /* Màu chữ trắng */
+    font-size: 4em; /* Kích thước chữ lớn */
     font-weight: normal; /* Độ đậm vừa phải */
     line-height: 1.2; /* Khoảng cách giữa các dòng */
     margin: 0; /* Xóa khoảng cách mặc định */
     font-family: 'Arial', sans-serif; /* Hoặc font theo thiết kế */
+    font-weight: 700;
+
 }
 .about-section p{
-    font-size: 1.1em;
-    color: #f0f0f0;
-    margin-bottom: 40px;
+    text-align: center; /* Căn giữa văn bản */
+    max-width: 600px; /* Giới hạn chiều rộng */
+    margin: 0 auto; /* Căn giữa phần tử theo chiều ngang */
+    font-size: 16px; /* Kích thước chữ */
+    line-height: 1.6; /* Khoảng cách giữa các dòng */
+    color: #333; /* Màu chữ (có thể thay đổi) */
+    padding: 20px 0; /* Khoảng cách trên và dưới */
 }
 
 
-/* Features Section */
-.features {
-    background-color: #ffffff;
-    padding: 60px 0;
+/* Feature Section  1 */
+.feature-section1 {
+    background-color: transparent; /* Nền trắng */
+    padding: 30px 20px; /* Khoảng cách trong phần */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-container {
     display: flex;
-    justify-content: space-around;
-    text-align: center;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: space-between; /* Căn đều khoảng cách hai phần tử */
+    gap: 40px; /* Khoảng cách giữa văn bản và hình ảnh */
+    max-width: 1200px; /* Giới hạn chiều rộng tổng */
+    margin: 0 auto; /* Căn giữa phần container */
 }
 
-.feature {
-    width: 22%;
+.feature-text {
+    flex: 1; /* Chia đều không gian cho phần văn bản */
+    max-width: 600px; /* Đặt chiều rộng tối đa cho văn bản */
 }
 
-.feature img {
-    width: 100px;
-    height: 100px;
+.feature-text h4 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ff7300; /* Màu xanh lá */
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.feature-text h2 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    line-height: 1.2;
+}
+
+.feature-text p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
     margin-bottom: 20px;
 }
 
-.feature h3 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    color: #333;
+.feature-text .feature-link {
+    font-size: 16px;
+    color: #ff7300;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-.feature p {
-    color: #555;
+.feature-text .feature-link:hover {
+    color: #b95300; /* Màu xanh lá đậm khi hover */
 }
+
+.feature-image {
+    flex: 1; /* Chia đều không gian cho phần hình ảnh */
+    max-width: 600px; /* Đặt chiều rộng tối đa cho hình ảnh */
+}
+
+.feature-image img {
+    width: 100%; /* Hình ảnh tự động co dãn theo container */
+    border-radius: 10px; /* Bo góc cho hình ảnh */
+}
+
+/* Feature Section  2 */
+.feature-section2 {
+    background-color: transparent; /* Nền trắng */
+    padding: 80px 20px; /* Khoảng cách trong phần */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-container2 {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: space-between; /* Căn đều khoảng cách hai phần tử */
+    gap: 40px; /* Khoảng cách giữa văn bản và hình ảnh */
+    max-width: 1200px; /* Giới hạn chiều rộng tổng */
+    margin: 0 auto; /* Căn giữa phần container */
+}
+
+.feature-text2 {
+    flex: 1; /* Chia đều không gian cho phần văn bản */
+    max-width: 600px; /* Đặt chiều rộng tối đa cho văn bản */
+}
+
+.feature-text2 h4 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ff7300; /* Màu xanh lá */
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.feature-text2 h2 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    line-height: 1.2;
+}
+
+.feature-text2 p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.feature-text2 .feature-link {
+    font-size: 16px;
+    color: #ff7300;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.feature-text2 .feature-link:hover {
+    color: #b95300; /* Màu xanh lá đậm khi hover */
+}
+
+.feature-image2 {
+    flex: 1; /* Chia đều không gian cho phần hình ảnh */
+    max-width: 600px; /* Đặt chiều rộng tối đa cho hình ảnh */
+}
+
+.feature-image2 img {
+    width: 100%; /* Hình ảnh tự động co dãn theo container */
+    border-radius: 10px; /* Bo góc cho hình ảnh */
+}
+
+/* Feature Section  3 */
+.feature-section3 {
+    background-color: transparent; /* Nền trắng */
+    padding: 80px 20px; /* Khoảng cách trong phần */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-container3 {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: space-between; /* Căn đều khoảng cách hai phần tử */
+    gap: 40px; /* Khoảng cách giữa văn bản và hình ảnh */
+    max-width: 1200px; /* Giới hạn chiều rộng tổng */
+    margin: 0 auto; /* Căn giữa phần container */
+}
+
+.feature-text3 {
+    flex: 1; /* Chia đều không gian cho phần văn bản */
+    max-width: 600px; /* Đặt chiều rộng tối đa cho văn bản */
+}
+
+.feature-text3 h4 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ff7300; /* Màu xanh lá */
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.feature-text3 h2 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    line-height: 1.2;
+}
+
+.feature-text3 p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.feature-text3 .feature-link {
+    font-size: 16px;
+    color: #ff7300;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.feature-text3 .feature-link:hover {
+    color: #b95300; /* Màu xanh lá đậm khi hover */
+}
+
+.feature-image3 {
+    flex: 1; /* Chia đều không gian cho phần hình ảnh */
+    max-width: 600px; /* Đặt chiều rộng tối đa cho hình ảnh */
+}
+
+.feature-image3 img {
+    width: 100%; /* Hình ảnh tự động co dãn theo container */
+    border-radius: 10px; /* Bo góc cho hình ảnh */
+}
+
+/* About Testimonials */
+.testmonials-about-section {
+    background-color: #ffffff; /* Màu nền tối */
+    padding: 80px 20px; /* Khoảng cách trên và dưới */
+    text-align: center; /* Canh giữa nội dung */
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testmonials-about-section h2 {
+    color: #333; /* Màu chữ trắng */
+    font-size: 4em; /* Kích thước chữ lớn */
+    font-weight: normal; /* Độ đậm vừa phải */
+    line-height: 1.2; /* Khoảng cách giữa các dòng */
+    margin: 0; /* Xóa khoảng cách mặc định */
+    font-family: 'Arial', sans-serif; /* Hoặc font theo thiết kế */
+    font-weight: 700;
+
+}
+.testmonials-about-section p{
+    text-align: center; /* Căn giữa văn bản */
+    max-width: 600px; /* Giới hạn chiều rộng */
+    margin: 0 auto; /* Căn giữa phần tử theo chiều ngang */
+    font-size: 16px; /* Kích thước chữ */
+    line-height: 1.6; /* Khoảng cách giữa các dòng */
+    color: #333; /* Màu chữ (có thể thay đổi) */
+    padding: 20px 0; /* Khoảng cách trên và dưới */
+}
+
+
 
 /* Testimonials Section */
 .testimonials {
-    background-color: #f9f9f9;
-    padding: 60px 0;
-    text-align: center;
+    background-color: #ffffff;
+    padding: 60px 20px;
+    text-align: center
 }
 
-.testimonials h2 {
-    font-size: 2em;
-    margin-bottom: 30px;
-    color: #333;
+
+/* Nội dung đánh giá */
+.testimonials-content {
+    margin: 0 auto; /* Căn giữa phần container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 20px;
+}
+
+.testimonials-wrapper {
+    display: flex;
+    overflow: hidden;
+    max-width: 1200px;
 }
 
 .testimonial {
-    width: 30%;
-    margin: 0 auto;
-    margin-bottom: 20px;
+    flex: 0 0 300px; /* Mỗi đánh giá chiếm 300px */
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 10px;
+    text-align: left;
 }
 
-.testimonial p {
-    color: #555;
-    font-size: 1em;
+.testimonial-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
     margin-bottom: 10px;
 }
 
-.testimonial strong {
-    color: #333;
+.testimonial-rating {
+    font-size: 18px;
+    color: #ffcc00; /* Màu vàng cho sao */
 }
+
+.testimonial-quote {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.testimonial-author {
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Nút điều hướng */
+.nav-arrow {
+    background-color: #22222228;
+    color: #ffffff;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-arrow:hover {
+    background-color: #222222a8;
+}
+
+/* Căn chỉnh mũi tên */
+.left-arrow {
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.right-arrow {
+    position: absolute;
+    right: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
 
 /* Footer */
 .footer {
