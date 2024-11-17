@@ -939,18 +939,21 @@ body {
     }
 
     .testimonial {
+        all: unset; /* Loại bỏ toàn bộ các thuộc tính kế thừa */
         flex: 0 0 100%; /* Chiều rộng bằng 100% của màn hình */
-        width: 100%; /* Đảm bảo testimonial chiếm toàn bộ màn hình */
+        width: 90% !important; /* Đảm bảo testimonial chiếm toàn bộ màn hình */
         max-width: none;
-        margin: 0 auto; /* Căn giữa testimonial */
         scroll-snap-align: start; /* Dừng khi testimonial bắt đầu */
         box-sizing: border-box; /* Bao gồm padding và border */
+        padding: 20px; /* Đảm bảo khoảng cách bên trong hợp lý */
+        margin: 0px !important; /* Giảm thêm khoảng cách */
     }
 
     .testimonials-content {
         overflow-x: auto;
         white-space: wrap;
         padding: 0 10px; /* Khoảng cách nội dung */
+        max-width: 90%; /* Ensure it utilizes most of the viewport */
     }
 
     .testimonials-content::-webkit-scrollbar {
