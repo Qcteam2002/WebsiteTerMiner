@@ -51,3 +51,9 @@ fetch('footer.html')
     .catch(error => console.error('Error loading footer:', error));
 
 
+    document.addEventListener('DOMContentLoaded', () => {
+        const marqueeContent = document.querySelector('.marquee-content');
+        const clone = marqueeContent.innerHTML; // Clone nội dung
+        marqueeContent.innerHTML += clone; // Thêm nội dung clone vào cuối
+    });
+    
