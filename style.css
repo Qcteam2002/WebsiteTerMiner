@@ -933,7 +933,7 @@ body {
 @media (max-width: 768px) {
     .testimonials-wrapper {
         display: flex;
-        gap: 10px;
+        gap: 20px;
         overflow-x: auto;
         scroll-snap-type: x mandatory; /* Thêm snap cho cuộn ngang */
     }
@@ -969,6 +969,9 @@ body {
     .testimonial-header,
     .testimonial-content {
         padding: 10px;
+    }
+    .nav-arrow {
+        display: none; /* Ẩn cả nút điều hướng trái và phải */
     }
 }
 
