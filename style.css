@@ -645,6 +645,7 @@ body {
 @media (max-width: 768px) {
     .privacy-policy {
         padding: 30px 10px;
+        padding-top: 150px; /* Thêm khoảng trống phía trên để tránh header che khuất */
     }
 
     .privacy-policy h1 {
