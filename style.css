@@ -519,7 +519,6 @@ body {
     background-color: #ffffff;
     padding: 60px 20px;
     text-align: center;
-    width: 70%;
     margin: 0 auto;
 }
 
@@ -530,6 +529,7 @@ body {
     justify-content: center;
     position: relative;
     gap: 20px;
+    max-width: 1200px;
 }
 
 .testimonials-wrapper {
@@ -620,14 +620,14 @@ body {
 
 .left-arrow {
     position: absolute;
-    left: -40px;
+    left: -50px;
     top: 50%;
     transform: translateY(-50%);
 }
 
 .right-arrow {
     position: absolute;
-    right: -40px;
+    right: -50px;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -929,6 +929,37 @@ body {
     }
 }
 
+/* About Testimonials */
+@media (max-width: 768px) {
+.testmonials-about-section {
+    background-color: #ffffff; /* Màu nền tối */
+    padding: 40px 20px 10px 20px;
+    text-align: center; /* Canh giữa nội dung */
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testmonials-about-section h2 {
+    color: #333; /* Màu chữ trắng */
+    font-size: 2em; /* Kích thước chữ lớn */
+    font-weight: normal; /* Độ đậm vừa phải */
+    line-height: 1.2; /* Khoảng cách giữa các dòng */
+    margin: 0; /* Xóa khoảng cách mặc định */
+    font-family: 'Arial', sans-serif; /* Hoặc font theo thiết kế */
+    font-weight: 700;
+
+}
+.testmonials-about-section p{
+    text-align: center; /* Căn giữa văn bản */
+    max-width: 600px; /* Giới hạn chiều rộng */
+    margin: 0 auto; /* Căn giữa phần tử theo chiều ngang */
+    font-size: 16px; /* Kích thước chữ */
+    line-height: 1.6; /* Khoảng cách giữa các dòng */
+    color: #333; /* Màu chữ (có thể thay đổi) */
+    padding: 20px 0; /* Khoảng cách trên và dưới */
+}
+
 /* Testimonial content*/
 @media (max-width: 768px) {
     .testimonials-wrapper {
@@ -952,8 +983,9 @@ body {
     .testimonials-content {
         overflow-x: auto;
         white-space: wrap;
+        text-align: left;
         padding: 0 10px; /* Khoảng cách nội dung */
-        max-width: 90%; /* Ensure it utilizes most of the viewport */
+        max-width: 100%; /* Ensure it utilizes most of the viewport */
     }
 
     .testimonials-content::-webkit-scrollbar {
